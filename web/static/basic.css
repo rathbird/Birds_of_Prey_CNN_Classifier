@@ -1,0 +1,91 @@
+body {
+    font-size: 10pt;
+    font-family: Verdana, Geneva, Arial, Helvetica, sans-serif;
+    color: black;
+    line-height: 14pt;
+    padding-left: 5pt;
+    padding-right: 5pt;
+    padding-top: 0;
+    max-width: 900px;
+  }
+
+  form {
+    border: 1px solid #555;
+    width: 400px;
+    height: 50px;
+    vertical-align: center;
+  }
+  
+  h1 {
+    font: 14pt Verdana, Geneva, Arial, Helvetica, sans-serif;
+    font-weight: bold;
+    line-height: 20pt;
+  }
+  
+  p.subheader {
+    font-weight: bold;
+    color: #593d87;
+  }
+  
+  img {
+    padding: 3pt;
+    float: right;
+  }
+  
+  a {
+    text-decoration: none;
+  }
+  
+  a:link, a:visited {
+    color: #8094d6;
+  }
+  
+  a:hover, a:active {
+    color: #FF9933;
+  }
+  
+  div.footer {
+    font-size: 9pt;
+    font-style: italic;
+    line-height: 12pt;
+    text-align: center;
+    padding-top: 30pt;
+  }
+
+  .file_upload {
+    padding-top: 10px;
+    padding-left: 10px;
+  }
+
+  .box-img {
+    /* Define properties here */
+    float: left;
+    width: 100pt;
+  }
+
+  .menu {
+    list-style-type: none;
+    margin: 0;
+    padding-top: -15pt;
+    padding-left: -15pt;
+    padding: 0;
+    border: 1px solid #555;
+    background-color: #000;
+    width: 100%;
+    height: 15pt;
+  }
+
+  li {
+    display: inline;
+    text-align: center;
+    border-right: 1px solid #555;
+    color: #fff;
+    padding-left: 10px;
+    padding-right: 10px;
+    height: 15pt;
+    vertical-align: center;
+  }
+
+  #idname {
+    /* Define properties here */
+  }

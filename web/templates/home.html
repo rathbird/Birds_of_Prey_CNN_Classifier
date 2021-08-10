@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <!--<link rel="stylesheet" href="{{url_for('static',filename='basic.css')}}">-->
+  <link rel="stylesheet" href="../static/basic.css">
+  <title>Birds of Prey Image Analyzer</title>
+  </head>
+  <body>
+    <div class="page-header" id="banner">
+      <ul class='menu'>
+        <li><a href="{{ url_for('home') }}">Home</a></li>
+        <li><a href="{{ url_for('eagle') }}">Eagles</a></li>
+        <li><a href="{{ url_for('owl') }}">Owls</a></li>
+        <li><a href="{{ url_for('vulture') }}">Vultures</a></li>
+        <li><a href="{{ url_for('about') }}">About</a></li>
+        <li><a href="{{ url_for('ref') }}">References</a></li>
+    </ul>
+    <div class='box-image'>
+      <img src="http://2.bp.blogspot.com/-7AGvoGUqR4c/TdbJMH1aJMI/AAAAAAAAAeQ/sLlDfqbCWWw/s1600/baldeagle.jpg" alt="Bald eagle" height="100">
+    </div>
+    <div class='box-image'>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/thumb/4/4b/%D0%91%D0%B5%D1%80%D0%BA%D1%83%D1%82_(Aquila_chrysaetos).jpg/1200px-%D0%91%D0%B5%D1%80%D0%BA%D1%83%D1%82_(Aquila_chrysaetos).jpg" alt="Golden eagle" height="100">
+    </div>
+    <div class='box-image'>
+      <img src="https://cdn.britannica.com/07/167707-050-A8BE6A36/Lammergeier.jpg" alt="Lammergeier - Britannica" height="100">
+    </div>
+    <div class='box-image'>
+        <img src="https://cdn.britannica.com/91/8791-050-6BB6EB03/King-vulture.jpg" alt="King Vulture - Britannica" height="100">
+    </div>
+    <div class='box-image'>
+      <img src="https://www.dupageforest.org/hubfs/Plants-Wildlife/Photos/Wildlife/Birds/Birds%20of%20Prey/great-horned-owl-ErikDunham.jpg" alt="Great horned owl  (Erik Dunham)" height="100">
+    </div>
+        <div class='box-image'>
+        <img src="https://upload.wikimedia.org/wikipedia/commons/a/a4/Condor_in_flight.JPG" alt="Condor in Flight" height="100">
+    </div> 
+    <div class='box-image'>
+        <img src="https://africafreak.com/wp-content/uploads/2019/04/martial-eagle-with-prey-Etosha-National-Park.jpg" alt="Martial eagle" height="100">
+    </div>
+    <div class='box-image'>
+        <img src="https://dinoanimals.com/wp-content/uploads/2016/09/White-tailed-eagle-4.jpg" alt="White-tailed eagle" height="100">
+    </div> 
+  
+<br clear='all'>
+          <h1>Eagle / Vulture Image Classifier App</h1>
+          <p class="lead">Upload an image of one of these raptors and I will guess the class (<b>Eagle</b> or <b>Vulture</b>)</p>
+      <form action="" method=post enctype=multipart/form-data>
+        <input type=file name=file class='file_upload'>
+        <input type=submit value=Upload>
+      </form>
+    <table width=235 style="padding-left: 100pt;">
+      <tr>
+        <td><h3 id="tables">Your Uploaded Image</h3>
+                 
+          <img width="224" height="224" src="{{imagesource}}" align=left /> 
+              
+          <h3>{{label}}</h3></td>
+      </tr>
+    </table>>
+  </body>
+</html> 
