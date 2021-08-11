@@ -15,6 +15,13 @@ I needed a large quantity of images for my classes, at least 1000 per class for 
 ## Create an Image Pipeline
 Saving memory to use in model training is critically important. I used the Tensorflow ImageDataGenerator to load images as they were being trained as opposed to loading each image into an array and storing them in memory (2000+!!!). This also provides the opportunity to expand your train set by skewing, rotating, stretching, rescaling, zooming, flipping, etc, thus expanding your trainable images. See any of the model.py files in /src for examples
 
-<p>I really expected my transfer models to get me to 80-90% accuracy very quickly, but that wasn't the reality. These are the models I worked with:
+<p>I really expected my transfer models trained with imagenet weigts to get me to 80-90% accuracy very quickly, but that wasn't the reality. These are the models I worked with:
   <li>Minigooglenet
     <li>InceptionV3
+      <li>VGG16
+        <li>Sequential
+          <li>Xception
+            
+I ended up with most of my models overfitting, guessing eagle 100% of the time. None of my transfer models did better than random guessing. The Minigooglenet model performed the best, yet still only achieving 62% accuracy, and also prone to over-fitting. I used categorical crossentropy as my loss function and accuracy as my metric. I used softmax activation which in my final layer which is recommended for classifiers. I used various optimizers and saw negligible difference between them, SGD, RMSProp, Adam. Initially I would train 20-50 epochs with a learning rate of .0001 (default), and then do an additional training with 20 epochs with a faster learning rate, like .001 or .0005. I had middling success with these strategies.
+           
+I do plan to continue my quest to produce a better CNN model. The options for improving my model are 1) More images, 2) Lower learning rate, 3) Additional Layers / Additional trainable layers, and 4) Additonal dropout layers or a larger dropout rate. 
