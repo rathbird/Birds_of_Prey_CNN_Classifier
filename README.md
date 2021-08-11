@@ -14,3 +14,7 @@ I needed a large quantity of images for my classes, at least 1000 per class for 
 
 ## Create an Image Pipeline
 Saving memory to use in model training is critically important. I used the Tensorflow ImageDataGenerator to load images as they were being trained as opposed to loading each image into an array and storing them in memory (2000+!!!). This also provides the opportunity to expand your train set by skewing, rotating, stretching, rescaling, zooming, flipping, etc, thus expanding your trainable images. See any of the model.py files in /src for examples
+
+<p>I really expected my transfer models to get me to 80-90% accuracy very quickly, but that wasn't the reality. These are the models I worked with:
+  <li>Minigooglenet
+    <li>InceptionV3
