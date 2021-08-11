@@ -7,4 +7,6 @@ Convolutional Neural Network Classifier on two types of Birds of Prey (Eagle / V
 I needed a large quantity of images for my classes, at least 1000 per class for the train set. The easiest method to gather images is to use the Flickr api. Follow these instructions if you want to build your own model:
 
 1) Obtain a flickr api key / secret here: https://www.flickr.com/services/api/misc.api_keys.html (once downloaded, create a JSON file or copy my credentials.json file and put your values in the appropriate blanks)
-2) Copy the scraper.py file in /src from https://github.com/antiboredom/flickr-scrape - I did not create a virtual environment for the scraping. using this file, you can simply run the command line from your terminal in the format python scraper.py --search "SEARCH TERM" --max
+2) Copy the scraper.py file in /src from https://github.com/antiboredom/flickr-scrape - I did not create a virtual environment for the scraping. using this file, you can simply run the command line from your terminal in the format python scraper.py --search "SEARCH TERM" --max_pages 1 (this will give you 1000 image links)
+3) This code will create an images directory if one does not exist, and then create a subdirectory based on the search term or group name used in the search, and it will place a JSON file into that directory with as many pages of images requested.
+4) Open each JSON file with pandas dataframe read_json functionality. Use a list of directories and a loop of dataframes to scrape the images 
