@@ -30,7 +30,7 @@ I do plan to continue my quest to produce a better CNN model. The options for im
 All code is located in the /web folder. The main impetus of my classification project was to build a website for Birds of Prey. I found Flask somewhat difficult to use, mostly because of my unfamiliarity with the platform. I scoured the internet for examples and was able to build a basic home page with image upload functionality, and I provided a classification response. I was also able to add three information pages on eagles, owls, and vultures, and imbed videos. None of the content belongs to me and is credited to the original authors / websites.
             
 From this experience, I have two hints:<br>
-1) Do not use a Flask menu, use a simple <ul><li>+css menu and just use the standard Flask link decoration href='{{ url_for('home') }}' in your anchor tags, and add the app route with the render template for each page you are linking to:
+1) Do not use a Flask menu, use a simple html list+css menu and just use the standard Flask link decoration href='{{ url_for('home') }}' in your anchor tags, and add the app route with the render template for each page you are linking to:
 @app.route('/eagle')<br>
 def eagle():<br>
     return render_template('eagle.html')<br>
