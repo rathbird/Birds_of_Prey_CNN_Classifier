@@ -29,16 +29,25 @@ I do plan to continue my quest to produce a better CNN model. The options for im
 ## Building a Flask Website
 All code is located in the /web folder. The main impetus of my classification project was to build a website for Birds of Prey. I found Flask somewhat difficult to use, mostly because of my unfamiliarity with the platform. I scoured the internet for examples and was able to build a basic home page with image upload functionality, and I provided a classification response. I was also able to add three information pages on eagles, owls, and vultures, and imbed videos. None of the content belongs to me and is credited to the original authors / websites.
             
-From this experience, I have two hints:
-            1) Do not use a Flask menu, use a simple <ul><li>+css menu and just use the standard Flask link decoration href='{{ url_for('home') }}' in your anchor tags, and add the app route with the render template for each page you are linking to:
-@app.route('/eagle')
-def eagle():
-    return render_template('eagle.html')
-that took me way too long to figure out!
-            2) I did my best to get a simple flask website uploaded to AWS, but I gave up after three hours of complete befuddlement. I googled every error I got, and I found a whole bunch of people posting the same questions, with out finding any solutions that worked for me. I did find a very nice step by step tutorial: https://www.twilio.com/blog/deploy-flask-python-app-aws, but unfortunately I still didn't get it to work. I ended up going with Google Cloud, which was a much friendlier interface with free chat tech support, which was awesome. Check out their free tier! They were so nice to me, I feel like they deserve a plug :)
+From this experience, I have two hints:<br>
+1) Do not use a Flask menu, use a simple <ul><li>+css menu and just use the standard Flask link decoration href='{{ url_for('home') }}' in your anchor tags, and add the app route with the render template for each page you are linking to:
+@app.route('/eagle')<br>
+def eagle():<br>
+    return render_template('eagle.html')<br>
+that took me way too long to figure out!<br>
+2) I did my best to get a simple flask website uploaded to AWS, but I gave up after three hours of complete befuddlement. I googled every error I got, and I found a whole bunch of people posting the same questions, with out finding any solutions that worked for me. I did find a very nice step by step tutorial: https://www.twilio.com/blog/deploy-flask-python-app-aws, but unfortunately I still didn't get it to work. I ended up going with Google Cloud, which was a much friendlier interface with free chat tech support, which was awesome. Check out their free tier! They were so nice to me, I feel like they deserve a plug :)
             
 I hope you found this project helpful. Please feel free to use any of the code and if you have any hints on how to make it better, please reach out!
             
-Technologies used:
-Python
+## Technologies used:
+Python<br>
+Jupyter Notebook<br>
+TensorFlow<br>
+Google CoLab<br>
+Flask<br>
+Flickr api<br>
+Scikitlearn<br>
+Matplotlib<br>
+HTML<br>
+CSS<br>
             
