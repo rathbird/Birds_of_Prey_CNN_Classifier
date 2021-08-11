@@ -11,3 +11,6 @@ I needed a large quantity of images for my classes, at least 1000 per class for 
 3) This code will create an images directory if one does not exist, and then create a subdirectory based on the search term or group name used in the search, and it will place a JSON file into that directory with as many pages of images requested.
 4) Open each JSON file with pandas dataframe read_json functionality. Use a list of directories and a loop of dataframes to scrape the images (see birdsofprey.ipynb in /src)
 5) Curate your images! Even when using a group, which is a curated topic-centered collection, there is a lot of junk. Images fuzzy or too far away, or things that don't really match your needs, like the Philadelphia Eagles football team!
+
+## Create an Image Pipeline
+Saving memory to use in model training is critically important. I used the Tensorflow ImageDataGenerator to load images as they were being trained as opposed to loading each image into an array and storing them in memory (2000+!!!). This also provides the opportunity to expand your train set by skewing, rotating, stretching, rescaling, zooming, flipping, etc, thus expanding your trainable images. See any of the model.py files in /src for examples
