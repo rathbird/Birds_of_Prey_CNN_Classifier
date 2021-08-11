@@ -24,4 +24,7 @@ Saving memory to use in model training is critically important. I used the Tenso
             
 I ended up with most of my models overfitting, guessing eagle 100% of the time. None of my transfer models did better than random guessing. The Minigooglenet model performed the best, yet still only achieving 62% accuracy, and also prone to over-fitting. I used categorical crossentropy as my loss function and accuracy as my metric. I used softmax activation which in my final layer which is recommended for classifiers. I used various optimizers and saw negligible difference between them, SGD, RMSProp, Adam. Initially I would train 20-50 epochs with a learning rate of .0001 (default), and then do an additional training with 20 epochs with a faster learning rate, like .001 or .0005. I had middling success with these strategies.
            
-I do plan to continue my quest to produce a better CNN model. The options for improving my model are 1) More images, 2) Lower learning rate, 3) Additional Layers / Additional trainable layers, and 4) Additonal dropout layers or a larger dropout rate. 
+I do plan to continue my quest to produce a better CNN model. The options for improving my model are 1) More images, 2) Lower learning rate, 3) Additional Layers / Additional trainable layers, and 4) Additonal dropout layers or a larger dropout rate. I found this source to be useful in getting me started with CNN classification models: https://www.analyticsvidhya.com/blog/2020/08/top-4-pre-trained-models-for-image-classification-with-python-code/
+            
+## Building a Flask Website
+All code is located in the 
